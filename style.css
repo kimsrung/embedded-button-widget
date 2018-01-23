@@ -1,0 +1,147 @@
+#bloomin-bot-container{
+  position: fixed;
+  width: 0px;
+  height: 0px;
+  bottom: 0px;
+  right: 0px;
+  z-index: 100000;
+}
+.bloomin-bot{
+  background-color: #fff;
+  position: fixed;
+  right: 30px;
+  bottom: 100px;
+  z-index: 10000;
+  overflow: auto;
+  height: 0;
+  opacity: 0;
+  width: 320px;
+  border-radius: 3px;
+
+  -webkit-transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  webkit-animation:fadeOut ease-out 1;  /* call our keyframe named fadeOut, use animattion ease-out and repeat it only 1 time */
+  -moz-animation:fadeOut ease-out 1;
+  animation:fadeOut ease-out 1;
+
+  -webkit-animation-duration:0.16s;
+  -moz-animation-duration:0.16s;
+  animation-duration:0.16s;
+
+  box-shadow: 0 5px 6px -3px rgba(0,0,0,.2), 0 9px 12px 1px rgba(0,0,0,.14), 0 3px 16px 2px rgba(0,0,0,.12);
+}
+.slide-top {
+  -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+  -moz-animation:fadeIn ease-in 1;
+  animation:fadeIn ease-in 1;
+
+  -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+  -moz-animation-fill-mode:forwards;
+  animation-fill-mode:forwards;
+
+  -webkit-animation-duration:0.5s;
+  -moz-animation-duration:0.5s;
+  animation-duration:0.5s;
+  opacity: 1;
+  height: 70%;
+}
+.bloomin-bot iframe {
+  height: 100%;
+  width: 100%;
+}
+.bloomin-bot-launcher-badge{
+  position: absolute;
+  bottom: 68px;
+  right: 30px;
+  background: #ff1a00;
+  width: 14px;
+  height: 14px;
+  line-height: 22px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  z-index: 10001;
+}
+.bloomin-bot-launcher {
+  margin: 6px 8px;
+  top: auto;
+  right: 20px;
+  bottom: 20px;
+  left: auto;
+  position: absolute;
+  z-index: 10000;
+  line-height: 56px;
+  min-width: 0;
+  width: 56px;
+  height: 56px;
+  vertical-align: middle;
+  box-shadow: 0 5px 6px -3px rgba(0,0,0,.2), 0 9px 12px 1px rgba(0,0,0,.14), 0 3px 16px 2px rgba(0,0,0,.12);
+  border-radius: 50%;
+  background-clip: padding-box;
+  background-color: rgb(86,214,205);
+  overflow: hidden;
+  -webkit-transition: all .3s cubic-bezier(.55,0,.55,.2);
+  transition: all .3s cubic-bezier(.55,0,.55,.2);
+  -webkit-transition-property: background-color,box-shadow,-webkit-transform;
+  transition-property: background-color,box-shadow,-webkit-transform;
+  transition-property: background-color,box-shadow,transform;
+  transition-property: background-color,box-shadow,transform,-webkit-transform;
+  cursor: pointer;
+}
+.bloomin-bot-launcher-active .bloomin-bot-launcher-open-icon {
+    opacity: 0;
+    -webkit-transform: rotate(30deg) scale(0);
+    transform: rotate(30deg) scale(0);
+}
+.bloomin-bot-launcher-active .bloomin-bot-launcher-close-icon {
+    opacity: 1;
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+}
+
+.bloomin-bot-launcher-open-icon {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 16px;
+    width: 24px;
+    margin: auto;
+    opacity: 1;
+    -webkit-transform: rotate(0deg) scale(1);
+    transform: rotate(0deg) scale(1);
+    transition: opacity .08s linear,-webkit-transform .16s linear;
+    transition: transform .16s linear,opacity .08s linear;
+    transition: transform .16s linear,opacity .08s linear,-webkit-transform .16s linear;
+    background: url('img/favicon.png');
+    background-position: 50%;
+    background-size: 24px;
+    background-repeat: no-repeat;
+}
+.bloomin-bot-launcher-close-icon {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    -webkit-transform: rotate(-30deg);
+    transform: rotate(-30deg);
+    transition: opacity .08s linear,-webkit-transform .16s linear;
+    transition: transform .16s linear,opacity .08s linear;
+    transition: transform .16s linear,opacity .08s linear,-webkit-transform .16s linear;
+    background: url('img/close_white.png');
+    background-position: 50%;
+    background-size: 24px;
+    background-repeat: no-repeat;
+}
+
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-webkit-keyframes fadeOut { from { opacity:1; } to { opacity:0 } }
+@-moz-keyframes fadeOut { from { opacity:1; } to { opacity:0 } }
+@keyframes fadeOut { from { opacity:1; } to { opacity:0 } }
+
