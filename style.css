@@ -14,26 +14,23 @@
   z-index: 10000;
   overflow: auto;
   height: 0;
-  opacity: 0;
+  visibility: hidden;
   width: 320px;
   border-radius: 3px;
-
-  -webkit-transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-
+  box-shadow: 0 11px 15px -7px rgba(0, 0, 0, 0.1), 0 11px 38px -5px rgba(0, 0, 0, 0.08), 0 9px 46px 8px rgba(0, 0, 0, 0.05);
+}
+#bloomin-bot.clicked.slidedown {
   webkit-animation:fadeOut ease-out 1;
   -moz-animation:fadeOut ease-out 1;
   animation:fadeOut ease-out 1;
 
-  -webkit-animation-duration:0.16s;
-  -moz-animation-duration:0.16s;
-  animation-duration:0.16s;
-
-  box-shadow: 0 11px 15px -7px rgba(0, 0, 0, 0.1), 0 11px 38px -5px rgba(0, 0, 0, 0.08), 0 9px 46px 8px rgba(0, 0, 0, 0.05);
+  -webkit-animation-duration:.5s;
+  -moz-animation-duration:.5s;
+  animation-duration:.5s;
 }
 #bloomin-bot.slideup {
-  opacity: 1;
-  height: 70%;
+  -webkit-transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 
   -webkit-animation:fadeIn ease-in 1;
   -moz-animation:fadeIn ease-in 1;
@@ -43,9 +40,12 @@
   -moz-animation-fill-mode:forwards;
   animation-fill-mode:forwards;
 
-  -webkit-animation-duration:0.5s;
-  -moz-animation-duration:0.5s;
-  animation-duration:0.5s;
+  -webkit-animation-duration:.5s;
+  -moz-animation-duration:.5s;
+  animation-duration:.5s;
+
+  visibility: visible;
+  height: 70%;
 }
 #bloomin-bot iframe {
   height: 100%;
@@ -143,8 +143,40 @@
 @-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
 @-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
 @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-
-@-webkit-keyframes fadeOut { from { opacity:1; } to { opacity:0; } }
-@-moz-keyframes fadeOut { from { opacity:1; } to { opacity:0; } }
-@keyframes fadeOut { from { opacity:1; } to { opacity:0; } }
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+    height: 70%;
+    visibility: visible;
+  }
+  25% {
+    opacity: 0;
+    height: 0;
+    visibility: hidden;
+  }
+}
+@-moz-keyframes fadeOut {
+  0% {
+    opacity: 1;
+    height: 70%;
+    visibility: visible;
+  }
+  25% {
+    opacity: 0;
+    height: 0;
+    visibility: hidden;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    height: 70%;
+    visibility: visible;
+  }
+  15% {
+    opacity: .5;
+    height: 0;
+    visibility: hidden;
+  }
+}
 
