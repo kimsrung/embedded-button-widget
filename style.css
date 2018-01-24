@@ -6,7 +6,7 @@
   right: 0px;
   z-index: 100000;
 }
-.bloomin-bot{
+#bloomin-bot {
   background-color: #fff;
   position: fixed;
   right: 30px;
@@ -20,7 +20,8 @@
 
   -webkit-transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  webkit-animation:fadeOut ease-out 1;  /* call our keyframe named fadeOut, use animattion ease-out and repeat it only 1 time */
+
+  webkit-animation:fadeOut ease-out 1;
   -moz-animation:fadeOut ease-out 1;
   animation:fadeOut ease-out 1;
 
@@ -30,22 +31,23 @@
 
   box-shadow: 0 11px 15px -7px rgba(0, 0, 0, 0.1), 0 11px 38px -5px rgba(0, 0, 0, 0.08), 0 9px 46px 8px rgba(0, 0, 0, 0.05);
 }
-.slide-top {
-  -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+#bloomin-bot.slideup {
+  opacity: 1;
+  height: 70%;
+
+  -webkit-animation:fadeIn ease-in 1;
   -moz-animation:fadeIn ease-in 1;
   animation:fadeIn ease-in 1;
 
-  -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+  -webkit-animation-fill-mode:forwards;
   -moz-animation-fill-mode:forwards;
   animation-fill-mode:forwards;
 
   -webkit-animation-duration:0.5s;
   -moz-animation-duration:0.5s;
   animation-duration:0.5s;
-  opacity: 1;
-  height: 70%;
 }
-.bloomin-bot iframe {
+#bloomin-bot iframe {
   height: 100%;
   width: 100%;
 }
@@ -65,7 +67,7 @@
   text-align: center;
   z-index: 10001;
 }
-.bloomin-bot-launcher {
+#bloomin-bot-launcher {
   margin: 6px 8px;
   top: auto;
   right: 20px;
@@ -141,7 +143,8 @@
 @-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
 @-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
 @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-@-webkit-keyframes fadeOut { from { opacity:1; } to { opacity:0 } }
-@-moz-keyframes fadeOut { from { opacity:1; } to { opacity:0 } }
-@keyframes fadeOut { from { opacity:1; } to { opacity:0 } }
+
+@-webkit-keyframes fadeOut { from { opacity:1; } to { opacity:0; } }
+@-moz-keyframes fadeOut { from { opacity:1; } to { opacity:0; } }
+@keyframes fadeOut { from { opacity:1; } to { opacity:0; } }
 
