@@ -93,6 +93,10 @@
   transition-property: background-color,box-shadow,transform,-webkit-transform;
   cursor: pointer;
 }
+#bloomin-bot-launcher:hover {
+  webkit-box-shadow: 0 2px 8px rgba(0,0,0,.09),0 6px 40px rgba(0,0,0,.24)!important;
+  box-shadow: 0 2px 8px rgba(0,0,0,.09),0 6px 40px rgba(0,0,0,.24)!important;
+}
 .bloomin-bot-launcher-active .bloomin-bot-launcher-open-icon {
     opacity: 0;
     -webkit-transform: rotate(30deg) scale(0);
