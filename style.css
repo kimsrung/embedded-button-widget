@@ -5,6 +5,7 @@
   bottom: 0px;
   right: 0px;
   z-index: 100000;
+  opacity: 0;
 }
 #bloomin-bot {
   background-color: #fff;
