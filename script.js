@@ -47,7 +47,19 @@ function main() {
         });
         css_link.appendTo('head');
 
-        var html = '<div id="bloomin-bot-container"><div class="bloomin-bot-app-container"><div class="bloomin-bot-app bot-app-launcher-enabled"><div id="bloomin-bot" class="slidedown"><iframe src="' + window.pulseSettings.link + '" allowfullscreen frameborder="0" onload="setPrimaryColor(this)"></iframe></div><div class="bloomin-bot-launcher-badge"></div><div id="bloomin-bot-launcher"><div class="bloomin-bot-launcher-open-icon"></div><div class="bloomin-bot-launcher-close-icon"></div></div></div></div></div>';
+        var html = '<div id="bloomin-bot-container">' +
+                    '<div class="bloomin-bot-app-container">' +
+                      '<div class="bloomin-bot-app bot-app-launcher-enabled">' +
+                        '<div id="bloomin-bot" class="slidedown">' +
+                          '<iframe src="' + window.pulseSettings.link + '" allowfullscreen frameborder="0" onload="setPrimaryColor(this)"></iframe>' +
+                        '</div>' +
+                        '<div class="bloomin-bot-launcher-badge"></div>' +
+                        '<div id="bloomin-bot-launcher" class="hvr-icon-up">' +
+                          '<div class="bloomin-bot-launcher-open-icon hvr-icon"></div>' +
+                          '<div class="bloomin-bot-launcher-close-icon"></div>' +
+                        '</div>' +
+                      '</div>' +
+                    '</div>';
 
         var body = $('body');
         body.append(html);
